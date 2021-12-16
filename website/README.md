@@ -1,0 +1,1 @@
+Documentation site for [vue-monorepo-template](https://tsbbjs.github.io/vue-monorepo-template).
