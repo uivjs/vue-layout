@@ -1,0 +1,45 @@
+.uiv-layout {
+  display: flex;
+  flex: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  min-height: 0;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+.uiv-layout-header,
+.uiv-layout-footer {
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+}
+.uiv-layout-header {
+  height: 53px;
+  padding: 0 23px;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 53px;
+  background: #202225;
+}
+.uiv-layout-footer {
+  padding: 16px 23px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  background: #f0f2f5;
+}
+.uiv-layout-content {
+  -webkit-box-flex: 1;
+  flex: auto;
+}
+.uiv-layout-has-sider {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+}
+.uiv-layout-sider {
+  position: relative;
+  min-width: 0;
+  background: #343a40;
+  transition: all 0.2s;
+}

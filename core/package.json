@@ -1,15 +1,23 @@
 {
-  "name": "@vue-monorepo-template/base",
+  "name": "@uivjs/vue-layout",
   "version": "1.0.0",
-  "description": "base package.",
+  "description": "Handling the overall layout of a page.",
+  "author": "kenny wang <wowohoo@qq.com>",
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uivjs/vue-layout"
+  },
   "license": "MIT",
   "files": [
     "cjs",
     "esm"
   ],
   "keywords": [
+    "layout",
+    "vue-layout",
+    "uivjs",
     "vue",
     "vue3"
   ],

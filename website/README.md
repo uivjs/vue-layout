@@ -1,1 +1,1 @@
-Documentation site for [vue-monorepo-template](https://tsbbjs.github.io/vue-monorepo-template).
+Documentation site for [@uivjs/vue-layout](https://uivjs.github.io/vue-layout).

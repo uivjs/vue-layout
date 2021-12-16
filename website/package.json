@@ -1,7 +1,6 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "description": "简单的 vue 3 包开发工程实例模板 vue-monorepo-template。",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -10,13 +9,11 @@
     "map": "source-map-explorer dist/js/*.js --html dist/dependencies.html"
   },
   "dependencies": {
-    "@vue-monorepo-template/simple": "1.0.0",
-    "@vue-monorepo-template/base": "1.0.0",
+    "@uivjs/vue-layout": "1.0.0",
     "@uivjs/vue-github-corners": "1.0.0",
     "@uivjs/vue-markdown-preview": "0.2.1",
     "core-js": "^3.6.5",
-    "vue": "^3.0.0",
-    "vue-router": "^4.0.0-0"
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -31,17 +28,11 @@
     "source-map-explorer": "2.5.2"
   },
   "keywords": [
+    "layout",
+    "vue-layout",
+    "uivjs",
     "vue",
-    "vue3",
-    "simple",
-    "component",
-    "components",
-    "vue-monorepo-template",
-    "ui",
-    "css",
-    "uikit",
-    "vue-ui",
-    "framework"
+    "vue3"
   ],
   "eslintConfig": {
     "root": true,

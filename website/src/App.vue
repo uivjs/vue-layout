@@ -1,52 +1,76 @@
 <template>
   <div>
-    <github-corners fixed href="https://github.com/tsbbjs/vue-monorepo-template" />
-    <simple title="@vue-monorepo-template/simple"></simple>
-    <v-base title="@vue-monorepo-template/base"></v-base>
-    <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view></router-view>
+    <header class="banner">
+      <img alt="Vue logo" src="./assets/logo.png" />
+      <a href="https://github.com/uivjs/vue-layout" target="__blank">Vue Layout</a>
+      <p>{{ description }}</p>
+    </header>
+    <github-corners fixed href="https://github.com/uivjs/vue-layout" />
+    <example-base />
+    <markdown-preview class="markdown">
+      {{ markdown }}
+    </markdown-preview>
   </div>
 </template>
 <script>
 import { defineComponent } from 'vue';
 import GithubCorners from '@uivjs/vue-github-corners';
-import Simple from '@vue-monorepo-template/simple';
-import VBase from '@vue-monorepo-template/base';
+import MarkdownPreview from '@uivjs/vue-markdown-preview';
+import ExampleBase from './Example.vue';
+import '@uivjs/vue-markdown-preview/markdown.css';
+import str from '@uivjs/vue-layout/README.md';
+import pkg from '@uivjs/vue-layout/package.json';
 
 export default defineComponent({
+  data() {
+    return {
+      markdown: str,
+      description: pkg.description,
+    };
+  },
   components: {
+    'example-base': ExampleBase,
     GithubCorners,
-    Simple,
-    VBase,
+    MarkdownPreview,
   },
 });
 </script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.banner {
   text-align: center;
-  color: #2c3e50;
+  min-height: calc(100vh - 130px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #fff;
 }
-
-#nav {
-  padding: 30px;
+.banner img {
+  height: 20vmin;
 }
-
-#nav a {
+.banner a {
+  color: #09d3ac;
   font-weight: bold;
-  color: #2c3e50;
-  margin: 0 5px;
-  background: #ededed;
-  padding: 2px 8px;
-  border-radius: 3px;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.banner p {
+  margin-bottom: 10px;
+  padding: 10px;
+  max-width: 560px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #282c34;
+}
+.markdown {
+  margin: 0 auto;
+  max-width: 820px;
+  padding: 23px;
+  border-radius: 5px;
+  margin-bottom: 110px;
 }
 </style>
