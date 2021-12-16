@@ -1,7 +1,7 @@
 {
   "name": "@uivjs/vue-layout",
   "version": "1.0.0",
-  "description": "Handling the overall layout of a page.",
+  "description": "Layout component for Vue 3.0. Handling the overall layout of a page.",
   "homepage": "https://uivjs.github.io/vue-layout",
   "author": "kenny wang <wowohoo@qq.com>",
   "main": "./cjs/index.js",

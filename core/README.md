@@ -1,7 +1,7 @@
 @uivjs/vue-layout
 ===
 
-Handling the overall layout of a page.
+Layout component for Vue 3.0. Handling the overall layout of a page.
 
 ## Install
 
