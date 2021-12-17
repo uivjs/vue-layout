@@ -3,7 +3,7 @@
     <v-layout class="example">
       <v-header class="header"> Header </v-header>
       <v-content class="content"> Content </v-content>
-      <v-footer class="footer"> Footer </v-footer>
+      <v-footer class="footer"> Vue Layout ©2021 Created by uiv </v-footer>
     </v-layout>
 
     <v-layout class="example">
@@ -53,7 +53,7 @@ export default defineComponent({
 
 <style scoped>
 .warpper {
-  max-width: 560px;
+  max-width: 620px;
   margin: 0 auto;
   padding: 30px 0 60px 0;
 }

@@ -5,7 +5,7 @@
       <a href="https://github.com/uivjs/vue-layout" target="__blank">Vue Layout</a>
       <p>{{ description }}</p>
     </header>
-    <github-corners fixed href="https://github.com/uivjs/vue-layout" />
+    <github-corners target="__blank" fixed href="https://github.com/uivjs/vue-layout" />
     <example-base />
     <markdown-preview class="markdown">
       {{ markdown }}
@@ -68,7 +68,7 @@ html {
 }
 .markdown {
   margin: 0 auto;
-  max-width: 820px;
+  max-width: 620px;
   padding: 23px;
   border-radius: 5px;
   margin-bottom: 110px;
