@@ -1,6 +1,11 @@
 @uivjs/vue-layout
 ===
 
+[![Build & Deploy](https://github.com/uivjs/vue-layout/actions/workflows/ci.yml/badge.svg)](https://github.com/uivjs/vue-layout/actions/workflows/ci.yml)
+[![Downloads](https://img.shields.io/npm/dm/@uivjs/vue-layout.svg?style=flat)](https://www.npmjs.com/package/@uivjs/vue-layout)
+[![npm version](https://img.shields.io/npm/v/@uivjs/vue-layout.svg)](https://www.npmjs.com/package/@uivjs/vue-layout)
+[![npm unpkg](https://img.shields.io/badge/Open%20in-unpkg-blue)](https://uiwjs.github.io/npm-unpkg/#/pkg/@uivjs/vue-layout/file/README.md)
+
 Layout component for Vue 3.0. Handling the overall layout of a page.
 
 ## Install
