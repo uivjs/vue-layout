@@ -38,7 +38,7 @@
 <script>
 import { defineComponent } from 'vue';
 import { Layout, Header, Content, Footer, Sider } from '@uivjs/vue-layout';
-import '@uivjs/vue-layout/dist.css';
+// import '@uivjs/vue-layout/dist.css';
 
 export default defineComponent({
   components: {

@@ -1,4 +1,5 @@
 import { defineComponent, h, onUnmounted, ref, provide, inject } from 'vue';
+import '../dist.css';
 
 /**
  * Returns a random text
