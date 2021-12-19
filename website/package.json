@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@uivjs/vue-github-corners": "1.0.0",
-    "@uivjs/vue-layout": "1.0.1",
+    "@uivjs/vue-layout": "1.0.2",
     "@uivjs/vue-markdown-preview": "0.2.1",
     "core-js": "^3.6.5",
     "vue": "^3.0.0"
