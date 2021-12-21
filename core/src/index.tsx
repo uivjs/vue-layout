@@ -1,4 +1,4 @@
-import { defineComponent, h, onUnmounted, ref, provide, inject } from 'vue';
+import { defineComponent, ExtractPropTypes, h, onUnmounted, ref, watch, watchEffect, provide, inject } from 'vue';
 import '../dist.css';
 
 /**
@@ -53,13 +53,22 @@ export const Footer = defineComponent({
   },
 });
 
+const sider = {
+  collapsed: { type: Boolean, default: false },
+};
+
+export type SiderProps = ExtractPropTypes<typeof sider>;
 export const Sider = defineComponent({
   name: 'uiv-layout-sider',
+  props: sider,
   inject: ['addSider', 'removeSider'],
   setup(props, { slots }) {
+    const width = ref(props.collapsed ? 80 : 200);
     const siderId = ref(randomid());
     const addSider = inject<(id: string) => void>('addSider');
     const removeSider = inject<(id: string) => void>('removeSider');
+    watch(props, ({ collapsed }) => (width.value = collapsed ? 80 : 200));
+
     if (addSider) {
       addSider(siderId.value);
     }
@@ -68,6 +77,13 @@ export const Sider = defineComponent({
         removeSider(siderId.value);
       }
     });
-    return () => <aside class={`uiv-layout-sider`}>{slots.default ? slots.default() : null}</aside>;
+    return () => (
+      <aside
+        class={`uiv-layout-sider`}
+        style={{ width: `${width.value}px`, minWidth: `${width.value}px`, maxWidth: `${width.value}px` }}
+      >
+        {slots.default ? slots.default() : null}
+      </aside>
+    );
   },
 });

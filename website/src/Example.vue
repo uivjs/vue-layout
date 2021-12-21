@@ -25,9 +25,12 @@
     </v-layout>
 
     <v-layout class="example">
-      <v-sider class="sider"> Sider </v-sider>
+      <v-sider :collapsed="collapsed" class="sider"> Sider </v-sider>
       <v-layout>
-        <v-header class="header"> Header </v-header>
+        <v-header class="header">
+          <button @click="onCollapsed">collapsed={{ collapsed }}</button>
+          Header
+        </v-header>
         <v-content class="content"> Content </v-content>
         <v-footer class="footer"> Footer </v-footer>
       </v-layout>
@@ -38,9 +41,18 @@
 <script>
 import { defineComponent } from 'vue';
 import { Layout, Header, Content, Footer, Sider } from '@uivjs/vue-layout';
-// import '@uivjs/vue-layout/dist.css';
 
 export default defineComponent({
+  methods: {
+    onCollapsed() {
+      this.collapsed = !this.collapsed;
+    },
+  },
+  data() {
+    return {
+      collapsed: false,
+    };
+  },
   components: {
     ['v-layout']: Layout,
     ['v-header']: Header,
@@ -66,6 +78,7 @@ export default defineComponent({
 }
 .header {
   background-color: #7dbcea;
+  text-align: left;
 }
 .content {
   background-color: #108ee9;
