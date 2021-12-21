@@ -82,6 +82,12 @@ export default defineComponent({
 </template>
 ```
 
+## Sider Props
+
+Name | Type | Default | Description
+---- | ---- | ---- | ----
+collapsed | `boolean` | `false` | 当前收起状态
+
 ## Development
 
 ```bash

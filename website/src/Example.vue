@@ -28,7 +28,7 @@
       <v-sider :collapsed="collapsed" class="sider"> Sider </v-sider>
       <v-layout>
         <v-header class="header">
-          <button @click="onCollapsed">collapsed={{ collapsed }}</button>
+          <button @click="onCollapsed">{{ collapsed ? '>>' : '&lt;&lt;' }}</button>
           Header
         </v-header>
         <v-content class="content"> Content </v-content>
@@ -89,10 +89,6 @@ export default defineComponent({
 }
 .sider {
   background-color: #3ba0e9;
-  flex: 0 0 200px;
-  max-width: 200px;
-  min-width: 200px;
-  width: 200px;
   color: #fff;
   line-height: 120px;
 }
