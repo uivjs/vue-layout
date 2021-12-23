@@ -82,11 +82,49 @@ export default defineComponent({
 </template>
 ```
 
+## collapsed
+
+```vue
+<template>
+  <Layout class="example">
+    <Sider :collapsed="collapsed" class="sider"> Sider </Sider>
+    <Layout>
+      <Header class="header">
+        <button @click="onCollapsed">{{ collapsed ? '>>' : '&lt;&lt;' }}</button>
+        Header
+      </Header>
+      <Content class="content"> Content </Content>
+      <Footer class="footer"> Footer </Footer>
+    </Layout>
+  </Layout>
+</template>
+<script>
+import { defineComponent } from 'vue';
+import { Layout, Header, Content, Footer, Sider } from '@uivjs/vue-layout';
+
+export default {
+  methods: {
+    onCollapsed() {
+      this.collapsed = !this.collapsed;
+    },
+  },
+  data() {
+    return {
+      collapsed: false,
+    };
+  },
+  components: {
+    Layout, Header, Content, Footer, Sider
+  },
+};
+</script>
+```
+
 ## Sider Props
 
 Name | Type | Default | Description
 ---- | ---- | ---- | ----
-collapsed | `boolean` | `false` | 当前收起状态
+collapsed | `boolean` | `false` | Current collapsed state
 
 ## Development
 

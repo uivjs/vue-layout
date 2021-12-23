@@ -24,17 +24,17 @@
       <v-footer class="footer"> Footer </v-footer>
     </v-layout>
 
-    <v-layout class="example">
-      <v-sider :collapsed="collapsed" class="sider"> Sider </v-sider>
-      <v-layout>
-        <v-header class="header">
+    <Layout class="example">
+      <Sider :collapsed="collapsed" class="sider"> Sider </Sider>
+      <Layout>
+        <Header class="header">
           <button @click="onCollapsed">{{ collapsed ? '>>' : '&lt;&lt;' }}</button>
           Header
-        </v-header>
-        <v-content class="content"> Content </v-content>
-        <v-footer class="footer"> Footer </v-footer>
-      </v-layout>
-    </v-layout>
+        </Header>
+        <Content class="content"> Content </Content>
+        <Footer class="footer"> Footer </Footer>
+      </Layout>
+    </Layout>
   </div>
 </template>
 
@@ -54,6 +54,11 @@ export default defineComponent({
     };
   },
   components: {
+    Layout,
+    Header,
+    Content,
+    Footer,
+    Sider,
     ['v-layout']: Layout,
     ['v-header']: Header,
     ['v-content']: Content,
