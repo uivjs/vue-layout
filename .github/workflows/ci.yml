@@ -57,7 +57,7 @@ jobs:
       - run: npm publish --access public --provenance
         name: 📦 @vue-monorepo-template/base publish to NPM
         continue-on-error: true
-        working-directory: packages/base
+        working-directory: core
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
