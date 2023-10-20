@@ -22,6 +22,7 @@ package-lock.json
 .idea
 .vscode
 *.suo
+*.log
 *.ntvs*
 *.njsproj
 *.sln
